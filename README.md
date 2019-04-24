@@ -7,15 +7,15 @@ Queries:
 * How many Authors do we have?
 
 ```
-SELECT count(id) FROM books;
-# Book.count
+SELECT count(id) FROM authors;
+Author.count
 ```
 
 * How many Books?
 
 ```
-SELECT count(id) FROM authors;
-Author.count
+SELECT count(id) FROM books;
+# Book.count
 ```
 
 * How many books do we have in each topic?
@@ -25,7 +25,7 @@ SELECT topic, count(topic)
   FROM books
   GROUP BY topic;
 # Book.group(:topic).count(:topic)
-```
+``` 
 
 * How many books in each topic && min, max, page count by topic?
 

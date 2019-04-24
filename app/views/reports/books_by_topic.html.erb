@@ -1,2 +1,7 @@
-<h1>Reports#books_by_topic</h1>
-<p>Find me in app/views/reports/books_by_topic.html.erb</p>
+<h5>Books by topic</h5>
+<br />
+<% if @report %>
+  <p>There are <%= @report %> authors in database.</p>
+<% else %>
+  <p>Error finding results</p>
+<% end %>

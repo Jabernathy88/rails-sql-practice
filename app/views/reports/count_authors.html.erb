@@ -1,2 +1,7 @@
-<h1>Reports#count_authors</h1>
-<p>Find me in app/views/reports/count_authors.html.erb</p>
+<h5>Count authors</h5>
+<br />
+<% if @report %>
+  <p>There are <%= @report %> authors in database.</p>
+<% else %>
+  <p>Error finding results</p>
+<% end %>
