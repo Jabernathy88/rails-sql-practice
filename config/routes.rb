@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :books
-  resources :authors
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'reports#index'
+
+  resources :books, :authors
+
+  namespace :reports do
+    get 'index', 'count_authors', 'count_books', 'books_by_topic',
+        'books_by_topic_summary', 'authors_join_books', 'index_explain'
+  end
+
 end
